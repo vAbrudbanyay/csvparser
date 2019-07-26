@@ -1,0 +1,6 @@
+OrderItemId,OrderId,BuyerName,BuyerEmail,Address,Postcode,SalePrice,ShippingPrice,SKU,Status,OrderDate
+256,356,Thomas Great,greatT@yes.hu,,2256,1.00,2.00,12345-WHT-XL,IN_STOCK,
+255,266,Lance Hart,lance.hart@mycom.at,,7633,0.00,1.00,12345-WHT-XL,IN_STOCK,2019-03-13
+269,222,Josef Birke,,,8000,7.55,1.00,12345-WHT-XL,IN_STOCK,
+112,211,Laure Ness,lness@noway.net,,6001,687.25,15.00,12345-WHT-XL,OUT_OF_STOCK,2018-12-11
+396,569,Poppy Seed,poppy-seed@company.com,,1114,0.00,2.00,12345-WHT-XL,OUT_OF_STOCK,
