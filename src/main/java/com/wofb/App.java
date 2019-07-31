@@ -1,8 +1,5 @@
 package com.wofb;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,7 +7,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class App {
-//    private static final Logger LOGGER = LogManager.getLogger(App.class);
+    //    private static final Logger LOGGER = LogManager.getLogger(App.class);
     public static void main(String[] args) throws IOException, SQLException {
 
         final Properties prop = new Properties();

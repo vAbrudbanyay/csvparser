@@ -1,20 +1,13 @@
 package com.wofb;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import static org.apache.commons.lang3.StringUtils.isEmpty;
 
 public class DB {
-  //  private static final Logger LOGGER = LogManager.getLogger(DB.class);
+    //  private static final Logger LOGGER = LogManager.getLogger(DB.class);
 
     private final String URL;
     private final String USER_NAME;
@@ -65,11 +58,11 @@ public class DB {
             LOGGER.info("SQLState: " + ex.getSQLState());
             LOGGER.info("VendorError: " + ex.getErrorCode());*/
         } catch (IllegalAccessException e) {
-           // LOGGER.info(e.getMessage());
+            // LOGGER.info(e.getMessage());
         } catch (InstantiationException e) {
-           // LOGGER.info(e.getMessage());
+            // LOGGER.info(e.getMessage());
         } catch (ClassNotFoundException e) {
-           // LOGGER.info(e.getMessage());
+            // LOGGER.info(e.getMessage());
         }
         return connection;
     }
@@ -101,7 +94,7 @@ public class DB {
     public void dbInsertOperation(final InputFileLine input) throws SQLException {
 
         // if orderDate is empty, use today's date
-        if(isEmpty(input.getOrderDate())){
+        if (isEmpty(input.getOrderDate())) {
             input.setOrderDate(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
         }
 

@@ -1,8 +1,6 @@
 package com.wofb;
 
 import org.apache.commons.validator.routines.EmailValidator;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -16,7 +14,7 @@ import static org.apache.commons.collections4.CollectionUtils.isEmpty;
 import static org.apache.commons.lang3.StringUtils.isEmpty;
 
 public class InputFileLineValidator {
-   // private static final Logger LOGGER = LogManager.getLogger(InputFileLineValidator.class);
+    // private static final Logger LOGGER = LogManager.getLogger(InputFileLineValidator.class);
 
     public enum Status {
         IN_STOCK,
@@ -44,8 +42,8 @@ public class InputFileLineValidator {
         errorMsg.addAll(validateStatus());
         errorMsg.addAll(validateShippingPrice());
         errorMsg.addAll(validateSalePrice());
-     //   errorMsg.addAll(validateOrderId());
-     //   errorMsg.addAll(OrderItemId());
+        //   errorMsg.addAll(validateOrderId());
+        //   errorMsg.addAll(OrderItemId());
 
         final OutputFileLine output = new OutputFileLine(input.getLineNumber());
         if (isEmpty(errorMsg)) {
@@ -195,7 +193,7 @@ public class InputFileLineValidator {
                 errors.add("OrderId is already present in the database.");
             }
         } catch (SQLException e) {
-     //       LOGGER.debug(e.getMessage());
+            //       LOGGER.debug(e.getMessage());
         }
         return errors;
     }
@@ -215,7 +213,7 @@ public class InputFileLineValidator {
                 errors.add("OrderItemId is already present in the database.");
             }
         } catch (SQLException e) {
-   //         LOGGER.debug(e.getMessage());
+            //         LOGGER.debug(e.getMessage());
         }
         return errors;
     }
